@@ -1,0 +1,65 @@
+.title {
+    font-size: 24px; /* Adjust font size as needed */
+    font-weight: bold; /* Optionally, make the title bold */
+    font-family: Arial, sans-serif; /* Specify preferred font family */
+    color: #333; /* Choose your preferred text color */
+    text-align: center; /* Align the text to the center, or adjust as needed */
+    /* Add any additional styling properties you desire */
+}
+/* Container Styles */
+.order-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #3367ec;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+.order-cont {
+    max-width: 100%;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #3367ec;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Subheader Styles */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Date Styles */
+h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+/* Show Link Styles */
+a.show {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Hover Styles for Show Link */
+a.show:hover {
+    background-color: #0056b3;
+}

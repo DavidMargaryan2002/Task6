@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="efdb75c1-6428-4554-ad30-957d62bb77b0" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ecuhNlVMPx3Xq1LylMZI3HOw5s" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/tnayinner/onlineshop&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\internship\Task6\Admin\View" />
+      <recent name="C:\xampp\htdocs\internship\Task6\User\View" />
+      <recent name="C:\xampp\htdocs\internship\Task6\User\Public\Js" />
+      <recent name="C:\xampp\htdocs\internship\Task6\Admin" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="efdb75c1-6428-4554-ad30-957d62bb77b0" name="Changes" comment="" />
+      <created>1712216305189</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712216305189</updated>
+      <workItem from="1712216306318" duration="18781000" />
+      <workItem from="1712304634355" duration="6689000" />
+      <workItem from="1712311388294" duration="15192000" />
+      <workItem from="1712559151307" duration="22754000" />
+      <workItem from="1712645694385" duration="23145000" />
+      <workItem from="1712760311340" duration="10892000" />
+      <workItem from="1712820461434" duration="7646000" />
+      <workItem from="1712828784819" duration="14243000" />
+      <workItem from="1712905150419" duration="25650000" />
+      <workItem from="1713009893246" duration="7607000" />
+      <workItem from="1713089851777" duration="3231000" />
+      <workItem from="1713163531456" duration="25414000" />
+      <workItem from="1713251390090" duration="2643000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

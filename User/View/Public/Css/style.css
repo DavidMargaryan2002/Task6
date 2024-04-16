@@ -1,0 +1,184 @@
+.img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    background-repeat: no-repeat;
+}
+.card{
+    width: 300px;
+    height: 550px
+}
+.pluse{
+    color: blue;
+}
+.min{
+    color: red;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:999;
+}
+.footer {
+    bottom: 0;
+    width: 100%;
+    z-index:999;
+}
+body{
+    padding-top: 85px;
+    margin-top: 100px;
+}
+.btnmin {
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    border: 1px solid #17a2b8;
+    background-color: transparent;
+    color: #17a2b8;
+    height: 35px;
+}
+
+.quantity {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid #17a2b8;
+}
+.addCart{
+    bottom: 0;
+}
+.row{
+    margin: 0;
+}
+.section_order {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.order_div {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+order_h1 {
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+button.order {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.order:hover {
+    background-color: #0056b3;
+}
+/* Navbar Background and Text Color */
+#headerNav {
+    background-color: #3367ec; /* Dark red background */
+}
+
+#headerNav .navbar-brand img {
+    max-height: 60px; /* Limit the logo height */
+}
+
+#headerNav .navbar-nav .nav-link {
+    color: #ffffff; /* Text color */
+    font-weight: 500; /* Font weight */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+#headerNav .navbar-nav .nav-link:hover {
+    color: #ffffff; /* Hover color */
+    text-decoration: none; /* Remove underline */
+}
+
+#headerNav .navbar-toggler-icon {
+    color: #ffffff; /* Toggler icon color */
+}
+
+/* Dropdown Styles */
+#headerNav select.btn-mini {
+    background-color: #356adc; /* Dropdown background color */
+    color: #ffffff; /* Dropdown text color */
+    /*border: 1px solid #ffffff; !* Dropdown border *!*/
+    /*border-radius: 4px; !* Border radius *!*/
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+#headerNav select.btn-mini:hover {
+    background-color: #02172c; /* Hover background color */
+}
+
+/* Responsive Styles */
+@media (max-width: 991.98px) {
+    #headerNav .navbar-nav .nav-link {
+        padding: 10px 15px; /* Adjust padding for smaller screens */
+    }
+}
+/* Section Styles */
+section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="email"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button Styles */
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
