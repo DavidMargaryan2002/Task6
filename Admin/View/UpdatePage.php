@@ -18,7 +18,7 @@
            aria-describedby="inputGroup-sizing-sm" placeholder="Description">
     <input type="text" name="price" value="<?= $product['price'] ?>" class="form-control" aria-label="Small"
            aria-describedby="inputGroup-sizing-sm" placeholder="Price">
-    <input type="number" name="cuantity" value="<?= $product['quantity'] ?>" class="form-control" aria-label="Small"
+    <input type="number" name="quantity" value="<?= $product['quantity'] ?>" class="form-control" aria-label="Small"
            aria-describedby="inputGroup-sizing-sm" placeholder="Quantity">
     <input type="File" name="image" value="<?= $product['image_path'] ?>" class="form-control" aria-label="Small"
            aria-describedby="inputGroup-sizing-sm" placeholder="Product image">

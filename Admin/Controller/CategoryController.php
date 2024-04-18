@@ -2,12 +2,6 @@
 
 class CategoryController
 {
-    private $model;
-
-    public function __construct()
-    {
-        $this->model = Model::getInstance();
-    }
 
     public function addCategoryPage()
     {
@@ -15,7 +9,8 @@ class CategoryController
             include 'View/LoginPage.php';
             die;
         }
-        $allCategory = $this->model->getAllCategory();
+        $categoryModel = CategoryModel::getInstance();
+        $allCategory = $categoryModel->getAllCategory();
         include 'View/addCategory.php';
     }
 
@@ -23,7 +18,8 @@ class CategoryController
     {
         if (isset($_POST['addCategory'])) {
             $category = $_POST['category'];
-            $this->model->addCategory($category);
+            $categoryModel = CategoryModel::getInstance();
+            $categoryModel->addCategory($category);
             header('Location:index.php?action=addCategoryPage');
             exit;
         }
@@ -31,7 +27,8 @@ class CategoryController
 
     public function getNavbar()
     {
-        $allCategory = $this->model->getAllCategory();
+        $categoryModel = CategoryModel::getInstance();
+        $allCategory = $categoryModel->getAllCategory();
         include 'View/Navbar.php';
     }
 

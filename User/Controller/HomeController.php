@@ -2,13 +2,6 @@
 
 class HomeController
 {
-    private $model;
-
-    public function __construct()
-    {
-        $this->model = Model::getInstance();
-    }
-
     public function Header()
     {
         include 'View/HeaderFooter/Header.php';
@@ -19,60 +12,58 @@ class HomeController
         include 'View/HeaderFooter/Footer.php';
     }
 
+    public function Navbar()
+    {
+        $categoriesModel = CategoriesModel::getInstance();
+        $allCategory = $categoriesModel->getAllCategory();
+        include 'View/navbar.php';
+    }
+
     public function getProducts()
     {
-        $allProducts = $this->model->getAllProducts();
         $this->Header();
-        $this->addCategoryPage();
+        $this->Navbar();
+        $productsModel = ProductsModel::getInstance();
+        $allProducts = $productsModel->getAllProducts();
         include 'View/Home.php';
         $this->Footer();
     }
 
-    public function getProductById()
+    public function getProductForCart()
     {
-        $allCategory = $this->model->getOllCategory();
-        include 'View/navbar.php';
+        $this->Navbar();
         if (isset($_SESSION['cart_array'])) {
+            $categoriesModel = CategoriesModel::getInstance();
+            $allCategory = $categoriesModel->getAllCategory();
             $array = $_SESSION['cart_array'];
-            foreach ($array as $id => $quantity) {
-                $_SESSION['cart'][$id] = $this->model->getProductById($id);
+            $productsModel = ProductsModel::getInstance();
+            $productIds = array_keys($array);
+            $quantity = array_keys($array);
+            foreach ($array as $key => $value) {
+                $product[$key] = $productsModel->getProductById($key);
+
             }
-            $this->total();
+
+            $price = array_sum($_SESSION['sum'] ?? []);
+            $total_quantity = array_sum($_SESSION['total_quantity'] ?? []);
+            include 'View/CartPage.php';
             $this->Footer();
         }
-    }
 
-    public function addCategoryPage()
-    {
-        $allCategory = $this->model->getOllCategory();
-        include 'View/navbar.php';
 
     }
 
     public function getProductByCategory()
     {
-        $allCategory = $this->model->getOllCategory();
-        include 'View/navbar.php';
+        $this->Header();
+        $this->Navbar();
+        $categoriesModel = CategoriesModel::getInstance();
+        $allCategory = $categoriesModel->getAllCategory();
         $category_id = $_GET['id'];
-        $productByCategory = $this->model->getProductByCategory($category_id);
+        $productsModel = ProductsModel::getInstance();
+        $productByCategory = $productsModel->getProductByCategory($category_id);
         include 'View/CategoryPage.php';
-
     }
 
-    public function total()
-    {
-        if (isset($_SESSION['cart_array']) || isset($_SESSION['sum']) || isset($_SESSION['total_quantity'])) {
-            $y = 0;
-            foreach ($_SESSION['sum'] as $key) {
-                $y = $y + $key;
-            }
-            $price = $y;
-            $x = 0;
-            foreach ($_SESSION['total_quantity'] as $val) {
-                $x = $x + $val;
-            }
-            $total_quantity = $x;
-            include 'View/CartPage.php';
-        }
-    }
+
 }

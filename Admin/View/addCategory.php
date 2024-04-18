@@ -19,7 +19,6 @@
         <button class="btn btn-primary" name="addCategory" role="button">Add</button>
     </div>
 </form>
-
 <table class="table mb-0">
     <?php foreach ($allCategory as $category): ?>
         <tr>

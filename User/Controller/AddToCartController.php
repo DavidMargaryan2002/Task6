@@ -18,7 +18,6 @@ if (isset($_POST['action']) && $_POST['action'] === 'add') {
 if (isset($_POST['action']) && $_POST['action'] == 'delete') {
     $id = $_POST['id'];
     unset($_SESSION['cart_array'][$id]);
-    unset($_SESSION['cart'][$id]);
     unset($_SESSION['sum'][$id]);
     unset($_SESSION['total_quantity'][$id]);
 

@@ -4,7 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efdb75c1-6428-4554-ad30-957d62bb77b0" name="Changes" comment="" />
+    <list default="true" id="efdb75c1-6428-4554-ad30-957d62bb77b0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Admin/Model/AdminModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/Model/CategoryModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/Model/OrdersModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/Model/ProductModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/User/Model/CategoriesModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/User/Model/OrderModel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/User/Model/ProductsModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Controller/AddNewProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Controller/AddNewProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Controller/AdminsOrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Controller/AdminsOrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Controller/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Controller/CheckLoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Controller/CheckLoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Controller/DeleteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Controller/DeleteController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Controller/HomePageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Controller/HomePageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Controller/UpdateProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Controller/UpdateProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Model/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Model/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/View/ShowOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/ShowOrder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/View/UpdatePage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/UpdatePage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/View/addCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/View/addCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Controller/AddToCartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Controller/AddToCartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Controller/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Controller/OrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/Model/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/Model/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/View/CartPage.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/View/CartPage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/View/navbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/View/navbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/User/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/User/index.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +40,9 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -26,11 +57,12 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/tnayinner/onlineshop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/internship/Task6&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -62,11 +94,26 @@
       <workItem from="1713009893246" duration="7607000" />
       <workItem from="1713089851777" duration="3231000" />
       <workItem from="1713163531456" duration="25414000" />
-      <workItem from="1713251390090" duration="2643000" />
+      <workItem from="1713251390090" duration="3995000" />
+      <workItem from="1713259136082" duration="14716000" />
+      <workItem from="1713336022755" duration="10358000" />
+      <workItem from="1713423101587" duration="19384000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/User/Controller/OrderController.php</url>
+          <line>15</line>
+          <option name="temporary" value="true" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

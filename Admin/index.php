@@ -1,6 +1,10 @@
 <?php
 session_start();
 require_once 'Model/Model.php';
+require_once 'Model/CategoryModel.php';
+require_once 'Model/ProductModel.php';
+require_once 'Model/OrdersModel.php';
+require_once 'Model/AdminModel.php';
 require_once 'Controller/CheckLoginController.php';
 require_once 'Controller/CategoryController.php';
 require_once 'Controller/HomePageController.php';

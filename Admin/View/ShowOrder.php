@@ -15,20 +15,18 @@
 <div class="order-container">
     <h1 class="title_name"><?= $_GET['name'] ?> -ի ընդհանուր գնումները</h1>
     <div class="row">
-        <?php foreach ($product as $val): ?>
-            <?php foreach ($val as $key): ?>
-                <div class="product-card">
-                    <img class="card-img-top" src="View/Public/Images/<?= $key['image_path'] ?>" alt="Card image cap">
-                    <div>
-                        <h5 class="card-title"><?= $key['name'] ?></h5>
-                        <h5 class="price"><?= $key['price'] ?> դրամ</h5>
-                        <p class="card-text"><?= $key['description'] ?></p>
-                        <p class="card-text">There are <?= $key['quantity'] ?> items in the range</p>
-                        <p> Քանակը <?= $quantity ?> </p>
-                        <p class="price">Ընդհանուր <?= $quantity * $key['price'] ?> դրամ</p>
-                    </div>
+        <?php foreach ($product as $val => $key): ?>
+            <div class="product-card">
+                <img class="card-img-top" src="View/Public/Images/<?= $key['image_path'] ?>" alt="Card image cap">
+                <div>
+                    <h5 class="card-title"><?= $key['name'] ?></h5>
+                    <h5 class="price"><?= $key['price'] ?> դրամ</h5>
+                    <p class="card-text"><?= $key['description'] ?></p>
+                    <p class="card-text">There are <?= $key['quantity'] ?> items in the range</p>
+                    <p> Քանակը <?= $productQuantity[$val] ?> </p>
+                    <p class="price">Ընդհանուր <?= $productQuantity[$val] * $key['price'] ?> դրամ</p>
                 </div>
-            <?php endforeach; ?>
+            </div>
         <?php endforeach; ?>
     </div>
     <h1 class="total_price">Ընդհանուր արժեքը <?= $_GET['price'] ?> դրամ</h1>

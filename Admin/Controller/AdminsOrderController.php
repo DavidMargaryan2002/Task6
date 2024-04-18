@@ -2,28 +2,26 @@
 
 class AdminsOrderController
 {
-    private $model;
-
-    public function __construct()
-    {
-        $this->model = Model::getInstance();
-    }
-
     public function getAllOrder()
     {
-        $order = $this->model->getAllOrder();
+        $ordersModel = OrdersModel::getInstance();
+        $order = $ordersModel->getAllOrder();
         include 'View/Order.php';
     }
 
     public function showOrder()
     {
         $order_id = $_GET['id'];
-        $prodByOrderId = $this->model->showOrder($order_id);
-        foreach ($prodByOrderId as $val) {
-            $id = $val['product_id'];
-            $quantity = $val['quantity'];
-            $product[$id] = $this->model->getProductById($id);
-        }
+        $ordersModel = OrdersModel::getInstance();
+        $prodByOrderId = $ordersModel->showOrder($order_id);
+        $productIds = array_map(function ($item) {
+            return $item['product_id'];
+        }, $prodByOrderId);
+        $productQuantity = array_map(function ($item) {
+            return $item['quantity'];
+        }, $prodByOrderId);
+        $product = $ordersModel->getProductForOrder($productIds);
         include 'View/ShowOrder.php';
     }
+
 }

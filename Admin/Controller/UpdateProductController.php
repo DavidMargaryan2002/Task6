@@ -2,41 +2,15 @@
 
 class UpdateProductController
 {
-    private $model;
-
-    public function __construct()
-    {
-        $this->model = Model::getInstance();
-    }
     public function updatePage()
     {
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
-            $productById = $this->model->getProductById($id);
-            $ollCategory = $this->model->getAllCategory();
+            $productModel = ProductModel::getInstance();
+            $productById = $productModel->getProductById($id);
+            $categoryModel = CategoryModel::getInstance();
+            $allCategory = $categoryModel->getAllCategory();
             include 'View/UpdatePage.php';
-        }
-    }
-    public function deleteImage()
-    {
-        $image = $_GET['image'];
-        function deleteImage($filePath)
-        {
-            if (file_exists($filePath)) {
-                if (unlink($filePath)) {
-                    return true;
-                } else {
-                    return false;
-                }
-            } else {
-                return false;
-            }
-        }
-        $imagePath = "Public/Images/$image";
-        if (deleteImage($imagePath)) {
-            echo 'Image deleted successfully.';
-        } else {
-            echo 'Failed to delete image.';
         }
     }
 
@@ -46,43 +20,34 @@ class UpdateProductController
             include 'View/LoginPage.php';
             die;
         }
-        if (isset($_GET['id'])){
-            if (!empty($_FILES["image"]["name"])){
-                $this->deleteImage();
-                $id = $_GET['id'];
-                $target_dir = "Public/Images/";
-                $target_file = $target_dir . basename($_FILES["image"]["name"]);
-                move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
-                $name = $_POST['name'];
-                $description = $_POST['description'];
-                $price = $_POST['price'];
-                $quantity = $_POST['quantity'];
-                $category_id = $_POST['category'];
-                $image_path = $_FILES["image"]["name"];
-                $this->model->updateProduct($name, $description, $price, $image_path,$quantity, $category_id, $id);
-                unset($_POST);
-                header("Location:index.php");
-                exit;
-            }else{
-                $id = $_GET['id'];
-                $target_dir = "View/Public/Images/";
-                $target_file = $target_dir . basename($_FILES["image"]["name"]);
-                move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
-                $name = $_POST['name'];
-                $description = $_POST['description'];
-                $price = $_POST['price'];
-                $quantity = $_POST['quantity'];
-                $category_id = $_POST['category'];
-                $image_path = $_GET['image'];
-                $this->model->updateProduct($name, $description, $price, $image_path,$quantity, $category_id, $id);
-                unset($_POST);
-                header('Location:index.php');
-                exit;
-            }
 
-            }
+        if (!isset($_GET['id'])) {
+            header('Location: error.php');
+            exit;
         }
 
+        $id = $_GET['id'];
 
+        if (!empty($_FILES["image"]["name"])) {
+            $target_dir = 'Public/Images/';
+            $target_file = $target_dir . basename($_FILES["image"]["name"]);
+            move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+            $image_path = $_FILES["image"]["name"];
+        } else {
+            $image_path = $_POST['image'];
+        }
+
+        $name = $_POST['name'];
+        $description = $_POST['description'];
+        $price = $_POST['price'];
+        $quantity = $_POST['quantity'];
+        $category_id = $_POST['category'];
+
+        $productModel = ProductModel::getInstance();
+        $productModel->updateProduct($name, $description, $price, $image_path, $quantity, $category_id, $id);
+
+        header('Location: index.php');
+        exit;
+    }
 
 }

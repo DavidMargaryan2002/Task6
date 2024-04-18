@@ -2,20 +2,14 @@
 
 class HomePageController
 {
-    private $model;
-
-    public function __construct()
-    {
-        $this->model = Model::getInstance();
-    }
-
     public function getProducts()
     {
         if (!isset($_SESSION['id'])) {
             include 'View/LoginPage.php';
             die;
         }
-        $allProducts = $this->model->getAllProducts();
+        $productModel = ProductModel::getInstance();
+        $allProducts = $productModel->getAllProducts();
         include 'View/Home.php';
     }
 
@@ -26,7 +20,8 @@ class HomePageController
             die;
         }
         $category_id = $_GET['id'];
-        $productByCategory = $this->model->getProductByCategory($category_id);
+        $productModel = ProductModel::getInstance();
+        $productByCategory = $productModel->getProductByCategory($category_id);
         include 'View/Categoryes.php';
     }
 }

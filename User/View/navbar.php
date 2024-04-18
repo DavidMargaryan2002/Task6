@@ -10,9 +10,7 @@
                     <a class="nav-link mx-2" href="index.php?action=cart">Cart</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <?php foreach ($allCategory
-
-                    as $category): ?>
+                    <?php foreach ($allCategory as $category): ?>
                 <li class="nav-item">
                     <a class="nav-link mx-2"
                        href="index.php?action=CategoryPage&id=<?= $category["cat_id"] ?>"><?= $category["category"] ?></a>

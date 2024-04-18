@@ -2,13 +2,6 @@
 
 class CheckLoginController
 {
-    private $model;
-
-    public function __construct()
-    {
-        $this->model = Model::getInstance();
-    }
-
     public function AdminLogin()
     {
         if ($_SERVER["REQUEST_METHOD"] === 'POST') {
@@ -20,7 +13,8 @@ class CheckLoginController
                 echo "empty";
                 exit;
             }
-            $admins = $this->model->checkAdmin($email, $hashPassword);
+            $adminModel = AdminModel::getInstance();
+            $admins = $adminModel->checkAdmin($email, $hashPassword);
             if ($admins < 1) {
                 $_SESSION["error"] = 'Wrong email or password';
                 exit;

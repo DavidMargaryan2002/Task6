@@ -2,33 +2,18 @@
 
 class OrderController
 {
-    private $model;
-
-    public function __construct()
-    {
-        $this->model = Model::getInstance();
-    }
-
 
     public function addOrder()
     {
-        global $product_id;
-        $y = 0;
-        foreach ($_SESSION['sum'] as $key) {
-            $y = $y + $key;
-        }
-        $total = $y;
+        $total = array_sum($_SESSION['sum'] ?? []);
         $name = $_POST['name'];
         $surname = $_POST['surname'];
         $email = $_POST['email'];
         $order_date = date("Y-m-d");
-        $order_id = $this->model->addInOrder($name, $surname, $email, $order_date, $total);
-        foreach ($_SESSION['cart_array'] as $id => $quan) {
-            foreach ($_SESSION['cart'][$id] as $key) {
-                $quantity = $quan;
-                $product_id = $key['id'];
-                $this->model->orderItem($order_id, $product_id, $quantity);
-            }
+        $orderModel = OrderModel::getInstance();
+        $order_id = $orderModel->addInOrder($name, $surname, $email, $order_date, $total);
+        foreach ($_SESSION['cart_array'] as $key => $value) {
+            $orderModel->orderItem($order_id, $key, $value);
         }
         unset($_SESSION['sum']);
         unset($_SESSION['total_quantity']);
@@ -38,9 +23,8 @@ class OrderController
 
     public function orderPage()
     {
-        include 'View/HeaderFooter/Header.php';
-        $allCategory = $this->model->getOllCategory();
-        include 'View/navbar.php';
+        $categoriesModel = CategoriesModel::getInstance();
+        $allCategory = $categoriesModel->getAllCategory();
         include 'View/Order.php';
     }
 
